@@ -18,6 +18,9 @@ class _LoginState extends State<Login> {
  
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
+  bool isObscure = true;
+  IconData showPassword = Icons.visibility;
+
 
 
   @override
@@ -25,6 +28,7 @@ class _LoginState extends State<Login> {
     final theme = Theme.of(context);
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -37,9 +41,8 @@ class _LoginState extends State<Login> {
                     height: 128,
                   ),
                   Image.asset(
-                    Images.register,
-                    color: theme.primaryColor,
-                    height: 80,
+                    Images.bigbearkat,
+                    height: 120,
                   ),
                   const SizedBox(
                     height: 64,
@@ -55,7 +58,16 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: FormFieldsWithName(
                       name: 'Password',
+                      isObscure: isObscure,
                       textEditingController: password,
+                      icon: showPassword,
+                      onTap: (){
+                        showPassword = isObscure ? Icons.visibility_off : Icons.visibility;
+                        setState(() {
+                          isObscure = !isObscure;
+                          
+                        });
+                      },
                     )
                   ),
                   const SizedBox(
@@ -89,6 +101,7 @@ class _LoginState extends State<Login> {
                   const SizedBox(
                     height: 16,
                   ),
+                  
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12),
         

@@ -64,9 +64,9 @@ class _RegisterState extends State<Register> {
                   height: 64,
                 ),
                 Image.asset(
-                  Images.register,
-                  color: theme.primaryColor,
-                  height: 80,
+                  Images.bigbearkat,
+                  
+                  height: 120,
                 ),
                 const SizedBox(
                   height: 64,

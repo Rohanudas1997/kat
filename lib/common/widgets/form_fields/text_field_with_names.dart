@@ -6,10 +6,16 @@ class FormFieldsWithName extends StatelessWidget {
     required this.name, 
     required this.textEditingController,
     this.action = TextInputAction.next,
+    this.isObscure = false,
+    this.onTap,
+    this.icon,
   });
   final String name;
   final TextEditingController textEditingController;
   final TextInputAction action;
+  final bool isObscure;
+  final Function? onTap;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +35,8 @@ class FormFieldsWithName extends StatelessWidget {
         TextFormField(
           controller: textEditingController,
           textInputAction: action,
-          decoration: InputFieldDecoration.getInputFieldDecoration(context),
+          obscureText: isObscure,
+          decoration: InputFieldDecoration.getInputFieldDecoration(context,onTap, icon),
         ),
         const SizedBox(
           height: 16,
