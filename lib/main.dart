@@ -5,17 +5,11 @@ import 'package:firebase_core/firebase_core.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   var currentPlatform;
- 
-  
-  
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp( MyApp());
+
+  runApp(MyApp());
 }
 
-class DefaultFirebaseOptions {
-}
+class DefaultFirebaseOptions {}
 
 class MyApp extends StatelessWidget {
   // ignore: non_constant_identifier_names
