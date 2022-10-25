@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\projects\\flutter\\shsu\\katgame\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\src\\trail\\shsu_rohan\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\projects\\flutter\\shsu\\katgame\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\src\\trail\\shsu_rohan\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

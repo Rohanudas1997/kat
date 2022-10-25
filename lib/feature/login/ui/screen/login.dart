@@ -4,6 +4,9 @@ import 'package:kat_game/common/constant/images.dart';
 import 'package:kat_game/common/widgets/buttons/common_rounded_button.dart';
 import 'package:kat_game/common/widgets/form_fields/text_field_with_names.dart';
 import 'package:kat_game/feature/home/ui/screen/home_page.dart';
+import 'package:kat_game/feature/login/controller/login_controller.dart';
+import 'package:kat_game/feature/login/controller/register_controller.dart';
+import 'package:kat_game/feature/login/ui/screen/forgot.dart';
 import 'package:kat_game/feature/login/ui/screen/register.dart';
 
 class Login extends StatefulWidget {
@@ -18,6 +21,7 @@ class _LoginState extends State<Login> {
   TextEditingController password = TextEditingController();
   bool isObscure = true;
   IconData showPassword = Icons.visibility;
+  LoginController loginuser = LoginController();
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +75,34 @@ class _LoginState extends State<Login> {
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: RichText(
                     text: TextSpan(
+                        text: 'Forgot Password? ',
+                        style: const TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                        ),
+                        children: [
+                          TextSpan(
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: ((context) => const Forgot()),
+                                    ),
+                                  );
+                                },
+                              text: 'Forgot Password ?',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: theme.primaryColor,
+                              ))
+                        ]),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: RichText(
+                    text: TextSpan(
                         text: 'Do you have an account? ',
                         style: const TextStyle(
                           fontSize: 14,
@@ -103,6 +135,7 @@ class _LoginState extends State<Login> {
                   child: CommonRoundedButton(
                     name: 'Login',
                     onTap: () {
+                      loginuser.loign(email.text, password.text);
                       Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(builder: (context) {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">518688539160-hoidn46ho3f3bv8qk50vhelana6or6bu.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">518688539160</string>
-    <string name="google_api_key" translatable="false">AIzaSyB4LQK3gueyKyUAQd6YqT54daI1ytLa1Rc</string>
-    <string name="google_app_id" translatable="false">1:518688539160:android:75d9d3ed01a7d4bf46396d</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB4LQK3gueyKyUAQd6YqT54daI1ytLa1Rc</string>
-    <string name="google_storage_bucket" translatable="false">katgame-fbfea.appspot.com</string>
-    <string name="project_id" translatable="false">katgame-fbfea</string>
+    <string name="default_web_client_id" translatable="false">1032086160402-8633q558epq9iodm7p37lvinh0tbm7u3.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1032086160402</string>
+    <string name="google_api_key" translatable="false">AIzaSyAHMljpxH0RCXT4nFakkcXJJDfpGUU8lRw</string>
+    <string name="google_app_id" translatable="false">1:1032086160402:android:8ddb0af20354a4293e84cb</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAHMljpxH0RCXT4nFakkcXJJDfpGUU8lRw</string>
+    <string name="google_storage_bucket" translatable="false">katgame-2129d.appspot.com</string>
+    <string name="project_id" translatable="false">katgame-2129d</string>
 </resources>
