@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\src\\trail\\shsu_rohan\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\RohanPC\\Documents\\Trail\\shsu_rohan\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\RohanPC\\.gradle\\caches\\transforms-3\\38e30c664341fe5bfcc1d9de04582443\\transformed\\browser-1.4.0\\res\\values\\values.xml",
@@ -18,6 +18,23 @@
                         "startOffsets": "661,719,785,848,1713,1784,8905,9118,9185,9264",
                         "endColumns": "57,65,62,61,70,71,67,66,78,68",
                         "endOffsets": "714,780,843,905,1779,1851,8968,9180,9259,9328"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\RohanPC\\Documents\\Trail\\shsu_rohan\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,200,283,387,497,617,714",
+                        "endColumns": "144,82,103,109,119,96,73",
+                        "endOffsets": "195,278,382,492,612,709,783"
+                    },
+                    "to": {
+                        "startLines": "126,130,131,132,133,134,135",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "8973,9333,9416,9520,9630,9750,9847",
+                        "endColumns": "144,82,103,109,119,96,73",
+                        "endOffsets": "9113,9411,9515,9625,9745,9842,9916"
                     }
                 },
                 {
@@ -76,42 +93,6 @@
                     }
                 },
                 {
-                    "source": "C:\\src\\trail\\shsu_rohan\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,200,283,387,497,617,714",
-                        "endColumns": "144,82,103,109,119,96,73",
-                        "endOffsets": "195,278,382,492,612,709,783"
-                    },
-                    "to": {
-                        "startLines": "126,130,131,132,133,134,135",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "8973,9333,9416,9520,9630,9750,9847",
-                        "endColumns": "144,82,103,109,119,96,73",
-                        "endOffsets": "9113,9411,9515,9625,9745,9842,9916"
-                    }
-                },
-                {
-                    "source": "C:\\src\\trail\\shsu_rohan\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,832",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "483,998"
-                    },
-                    "to": {
-                        "startLines": "137,142",
-                        "startColumns": "4,4",
-                        "startOffsets": "9992,10300",
-                        "endLines": "141,144",
-                        "endColumns": "12,12",
-                        "endOffsets": "10295,10464"
-                    }
-                },
-                {
                     "source": "C:\\Users\\RohanPC\\.gradle\\caches\\transforms-3\\542a859793ec57d6a4d40865c7efc6d9\\transformed\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
@@ -128,6 +109,25 @@
                         "endLines": "7,8,9,10,86,165,169,350,367,375",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "339,399,451,496,5500,11779,11976,21669,22783,23176"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\RohanPC\\Documents\\Trail\\shsu_rohan\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,832",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "483,998"
+                    },
+                    "to": {
+                        "startLines": "137,142",
+                        "startColumns": "4,4",
+                        "startOffsets": "9992,10300",
+                        "endLines": "141,144",
+                        "endColumns": "12,12",
+                        "endOffsets": "10295,10464"
                     }
                 }
             ]

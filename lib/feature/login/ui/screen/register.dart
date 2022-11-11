@@ -6,6 +6,7 @@ import 'package:kat_game/common/database/shared_pref.dart';
 import 'package:kat_game/common/widgets/buttons/common_rounded_button.dart';
 import 'package:kat_game/common/widgets/form_fields/input_field_decoration.dart';
 import 'package:kat_game/common/widgets/form_fields/text_field_with_names.dart';
+import 'package:kat_game/feature/home/ui/screen/home_page.dart';
 import 'package:kat_game/feature/login/Model/users.dart';
 
 import '../../controller/register_controller.dart';
@@ -117,6 +118,12 @@ class _RegisterState extends State<Register> {
                           samId: samId.text,
                           email: email.text);
                       handlenewuser.register(email.text, password.text);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: ((context) => const HomePage()),
+                        ),
+                      );
                     },
                   ),
                 ),
