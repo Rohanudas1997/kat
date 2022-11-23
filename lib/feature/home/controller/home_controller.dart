@@ -6,9 +6,13 @@ class HomeController extends GetxController{
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
   
   Future<void> getGamesStatus() async {
-    _firebaseFirestore.collection("games").snapshots().map((snapshot){
-        snapshot;
-        print(snapshot);
+    var data =  _firebaseFirestore.collection("games").snapshots();
+    data.map((event) {
+      event;
+      print(event);
+    });
+    
+        
   //   try {
   //     _firebaseFirestore.collection("games").snapshots().map((snapshot){
   //       snapshot;
@@ -20,4 +24,4 @@ class HomeController extends GetxController{
   // }
 
   
-});}}
+}}
