@@ -1,9 +1,13 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kat_game/common/constant/images.dart';
 import 'package:kat_game/common/database/shared_pref.dart';
 import 'package:kat_game/common/database/shared_pref.dart';
+import 'package:kat_game/feature/home/controller/home_controller.dart';
+import 'package:kat_game/feature/home/ui/screen/home_page.dart';
 import 'package:kat_game/feature/login/ui/screen/login.dart';
 import 'package:kat_game/feature/login/ui/screen/register.dart';
 
@@ -17,19 +21,22 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   late Timer timer ;
   bool firstTimeLogin = true;
+  bool isUser = false;
 
   _getFirstTimeLogin()async{
     firstTimeLogin = await SharedPref().getFirstTimeLogin();
+    isUser = await SharedPref().getUser() ?? false;
   }
 
   @override
   void initState() {
+
     _getFirstTimeLogin();
     timer = Timer.periodic(
       const Duration(seconds: 2), 
       (_){
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-              return  firstTimeLogin ? const Register(): const Login();
+              return  firstTimeLogin ? const Register(): !isUser ?  const Login() : const HomePage();
             },
           ),
         );

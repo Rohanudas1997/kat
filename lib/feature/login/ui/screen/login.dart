@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kat_game/common/constant/images.dart';
 import 'package:kat_game/common/widgets/buttons/common_rounded_button.dart';
 import 'package:kat_game/common/widgets/form_fields/text_field_with_names.dart';
@@ -8,6 +9,7 @@ import 'package:kat_game/feature/login/controller/login_controller.dart';
 import 'package:kat_game/feature/login/controller/register_controller.dart';
 import 'package:kat_game/feature/login/ui/screen/forgot.dart';
 import 'package:kat_game/feature/login/ui/screen/register.dart';
+import 'package:toast/toast.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -21,10 +23,30 @@ class _LoginState extends State<Login> {
   TextEditingController password = TextEditingController();
   bool isObscure = true;
   IconData showPassword = Icons.visibility;
-  LoginController loginuser = LoginController();
+  
+  @override
+  void initState() {
+    LoginController loginuser = Get.find();
+    loginuser.isLogged.addListener((){
+      if(loginuser.isLogged.value){
+        Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (context) {
+                          return const HomePage();
+                        }),
+                        (route) => false,
+                      );
+      }else{
+        Toast.show('Error while login');
+      }
+    });
+    
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+    LoginController loginuser = Get.find();
     final theme = Theme.of(context);
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
@@ -135,14 +157,8 @@ class _LoginState extends State<Login> {
                   child: CommonRoundedButton(
                     name: 'Login',
                     onTap: () {
-                      loginuser.loign(email.text, password.text);
-                      Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(builder: (context) {
-                          return const HomePage();
-                        }),
-                        (route) => false,
-                      );
+                      loginuser.login(email.text, password.text);
+                      
                     },
                   ),
                 ),

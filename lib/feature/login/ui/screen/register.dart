@@ -8,6 +8,7 @@ import 'package:kat_game/common/widgets/form_fields/input_field_decoration.dart'
 import 'package:kat_game/common/widgets/form_fields/text_field_with_names.dart';
 import 'package:kat_game/feature/home/ui/screen/home_page.dart';
 import 'package:kat_game/feature/login/Model/users.dart';
+import 'package:kat_game/feature/login/ui/screen/login.dart';
 
 import '../../controller/register_controller.dart';
 
@@ -24,7 +25,8 @@ class _RegisterState extends State<Register> {
   TextEditingController samId = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController confirmPassword = TextEditingController();
-
+  bool isObscure = true;
+  IconData showPassword = Icons.visibility;
   @override
   void initState() {
     SharedPref().saveFirstTimeLogin();
@@ -96,13 +98,31 @@ class _RegisterState extends State<Register> {
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: FormFieldsWithName(
                       name: 'Password',
+                      isObscure: isObscure,
                       textEditingController: password,
+                      icon: showPassword,
+                      onTap: () {
+                        showPassword =
+                            isObscure ? Icons.visibility_off : Icons.visibility;
+                        setState(() {
+                          isObscure = !isObscure;
+                        });
+                      },
                     )),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: FormFieldsWithName(
                       name: 'Confirm Password',
+                      isObscure: isObscure,
                       textEditingController: confirmPassword,
+                      icon: showPassword,
+                      onTap: () {
+                        showPassword =
+                            isObscure ? Icons.visibility_off : Icons.visibility;
+                        setState(() {
+                          isObscure = !isObscure;
+                        });
+                      },
                     )),
                 const SizedBox(
                   height: 16,
@@ -121,7 +141,7 @@ class _RegisterState extends State<Register> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: ((context) => const HomePage()),
+                          builder: ((context) => const Login()),
                         ),
                       );
                     },

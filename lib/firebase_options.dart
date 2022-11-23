@@ -27,7 +27,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        return web;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -64,8 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1032086160402',
     projectId: 'katgame-2129d',
     storageBucket: 'katgame-2129d.appspot.com',
-    iosClientId:
-        '1032086160402-ts0ts02s64euiioab4v9a3abmq550g81.apps.googleusercontent.com',
+    iosClientId: '1032086160402-ts0ts02s64euiioab4v9a3abmq550g81.apps.googleusercontent.com',
     iosBundleId: 'com.example.katGame',
   );
 
@@ -75,8 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1032086160402',
     projectId: 'katgame-2129d',
     storageBucket: 'katgame-2129d.appspot.com',
-    iosClientId:
-        '1032086160402-ts0ts02s64euiioab4v9a3abmq550g81.apps.googleusercontent.com',
+    iosClientId: '1032086160402-ts0ts02s64euiioab4v9a3abmq550g81.apps.googleusercontent.com',
     iosBundleId: 'com.example.katGame',
   );
 }

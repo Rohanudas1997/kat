@@ -29,6 +29,13 @@
             {
               "client_id": "1032086160402-8633q558epq9iodm7p37lvinh0tbm7u3.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1032086160402-sb74f5ar83e6i26ha6c6hvf5mno60va0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.KatGame"
+              }
             }
           ]
         }
@@ -58,6 +65,13 @@
             {
               "client_id": "1032086160402-8633q558epq9iodm7p37lvinh0tbm7u3.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1032086160402-sb74f5ar83e6i26ha6c6hvf5mno60va0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.KatGame"
+              }
             }
           ]
         }

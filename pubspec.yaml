@@ -43,6 +43,10 @@ dependencies:
   cached_network_image: ^3.2.2
   carousel_slider: ^4.1.1
   firebase_auth: ^4.0.2
+  bottom_bar: ^2.0.2
+  get: ^4.6.5
+  toast: ^0.3.0
+  cloud_firestore: ^4.1.0
 
 dev_dependencies:
   flutter_test:
