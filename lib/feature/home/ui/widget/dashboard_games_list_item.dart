@@ -1,7 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kat_game/common/widgets/images/custom_cached_image.dart';
 
 class DashboardGameListItem extends StatelessWidget {
   const DashboardGameListItem({
@@ -9,11 +6,15 @@ class DashboardGameListItem extends StatelessWidget {
     required this.icon,
     required this.title,
     required this.color,
+    required this.available,
+    required this.total,
     this.onTap,
   });
   final String icon;
   final String title;
   final Color color;
+  final String available;
+  final String total;
   final Function()? onTap;
 
   @override
@@ -47,15 +48,29 @@ class DashboardGameListItem extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              width: 8,
+              width: 12,
             ),
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 14,
-                color: Colors.black87,
-                fontWeight: FontWeight.w600,
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Colors.black87,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  available + ' / ' + total + '\nAvailable',
+                  style: const TextStyle(
+                    fontSize: 10,
+                    color: Colors.black87,
+                    fontWeight: FontWeight.w500,
+                  ),
+                )
+              ],
             )
           ],
         ),
